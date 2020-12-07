@@ -1,7 +1,7 @@
-package br.com.dbc.sincronizacao_receita.config;
+package br.com.sincronizacao_receita.config;
 
-import br.com.dbc.sincronizacao_receita.dto.ContaDTO;
-import br.com.dbc.sincronizacao_receita.model.Conta;
+import br.com.sincronizacao_receita.dto.ContaDTO;
+import br.com.sincronizacao_receita.model.Conta;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

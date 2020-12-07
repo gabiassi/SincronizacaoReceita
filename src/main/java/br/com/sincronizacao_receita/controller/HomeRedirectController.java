@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita.controller;
+package br.com.sincronizacao_receita.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

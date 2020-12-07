@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita.utils;
+package br.com.sincronizacao_receita.utils;
 
 import java.io.*;
 import java.util.Collection;

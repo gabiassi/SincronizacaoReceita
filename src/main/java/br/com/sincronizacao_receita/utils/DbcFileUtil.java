@@ -1,7 +1,7 @@
-package br.com.dbc.sincronizacao_receita.utils;
+package br.com.sincronizacao_receita.utils;
 
-import br.com.dbc.sincronizacao_receita.dto.ContaDTO;
-import br.com.dbc.sincronizacao_receita.service.ReceitaService;
+import br.com.sincronizacao_receita.dto.ContaDTO;
+import br.com.sincronizacao_receita.service.ReceitaService;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;

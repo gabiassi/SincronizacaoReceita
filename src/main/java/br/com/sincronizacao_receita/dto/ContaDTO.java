@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita.dto;
+package br.com.sincronizacao_receita.dto;
 
 import java.io.Serializable;
 

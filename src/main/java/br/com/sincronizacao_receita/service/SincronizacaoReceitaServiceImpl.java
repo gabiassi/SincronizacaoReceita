@@ -1,8 +1,8 @@
-package br.com.dbc.sincronizacao_receita.service;
+package br.com.sincronizacao_receita.service;
 
-import br.com.dbc.sincronizacao_receita.dto.ContaDTO;
-import br.com.dbc.sincronizacao_receita.utils.DbcFileUtil;
-import br.com.dbc.sincronizacao_receita.utils.DbcUtil;
+import br.com.sincronizacao_receita.dto.ContaDTO;
+import br.com.sincronizacao_receita.utils.DbcFileUtil;
+import br.com.sincronizacao_receita.utils.DbcUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

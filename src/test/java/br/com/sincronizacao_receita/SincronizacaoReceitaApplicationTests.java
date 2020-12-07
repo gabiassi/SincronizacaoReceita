@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita;
+package br.com.sincronizacao_receita;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

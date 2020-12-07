@@ -1,9 +1,8 @@
-package br.com.dbc.sincronizacao_receita.controller;
+package br.com.sincronizacao_receita.controller;
 
 
-import br.com.dbc.sincronizacao_receita.service.SincronizacaoReceitaServiceImpl;
-import br.com.dbc.sincronizacao_receita.service.SincronzacaoReceitaService;
-import br.com.dbc.sincronizacao_receita.utils.DbcUtil;
+import br.com.sincronizacao_receita.service.SincronzacaoReceitaService;
+import br.com.sincronizacao_receita.utils.DbcUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ByteArrayResource;

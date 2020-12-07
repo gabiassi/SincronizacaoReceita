@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita.model;
+package br.com.sincronizacao_receita.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

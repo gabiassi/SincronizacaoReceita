@@ -1,4 +1,4 @@
-package br.com.dbc.sincronizacao_receita.service;
+package br.com.sincronizacao_receita.service;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package br.com.dbc.sincronizacao_receita.service;
+package br.com.sincronizacao_receita.service;
 
-import br.com.dbc.sincronizacao_receita.model.Conta;
-import br.com.dbc.sincronizacao_receita.utils.DbcUtil;
+import br.com.sincronizacao_receita.model.Conta;
+import br.com.sincronizacao_receita.utils.DbcUtil;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

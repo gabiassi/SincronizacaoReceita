@@ -1,8 +1,8 @@
-package br.com.dbc.sincronizacao_receita.controller;
+package br.com.sincronizacao_receita.controller;
 
-import br.com.dbc.sincronizacao_receita.dto.ContaDTO;
-import br.com.dbc.sincronizacao_receita.model.Conta;
-import br.com.dbc.sincronizacao_receita.service.ContaService;
+import br.com.sincronizacao_receita.dto.ContaDTO;
+import br.com.sincronizacao_receita.model.Conta;
+import br.com.sincronizacao_receita.service.ContaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
