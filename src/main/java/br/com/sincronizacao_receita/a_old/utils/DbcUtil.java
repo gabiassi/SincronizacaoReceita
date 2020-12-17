@@ -1,8 +1,7 @@
-package br.com.sincronizacao_receita.utils;
+package br.com.sincronizacao_receita.a_old.utils;
 
 import java.io.*;
 import java.util.Collection;
-import java.util.Map;
 
 /**
  * Classe com alguns metodos utilitarios que podem ser utilizados em varias classes

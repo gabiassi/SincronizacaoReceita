@@ -1,14 +1,14 @@
-package br.com.sincronizacao_receita.utils;
+package br.com.sincronizacao_receita.a_old.utils;
 
-import br.com.sincronizacao_receita.dto.ContaDTO;
+/*import br.com.sincronizacao_receita.dto.ContaDTO;
 import br.com.sincronizacao_receita.service.ReceitaService;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
-import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.csv.CSVRecord;*/
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.mock.web.MockMultipartFile;
+/*import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -16,7 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner;*/
 
 /**
  * Classe com alguns metodos utilitarios que podem ser utilizados em varias classes
@@ -56,11 +56,11 @@ public class DbcFileUtil {
        // }
     }*/
 
-    /**
+   /**
      * Metodo para fazer validacoes se prosegue para processar contas de um arquivo
      *
      * @return boolean
-     */
+
     public static boolean isValidaProcessaContas(String nomeArquivo, List<ContaDTO> contasList) {
         if (contasList == null || contasList.size() == 0) {
             logger.error("Erro no arquivo [" + nomeArquivo + "]. Nenhuma conta encontrada no arquivo. ");
@@ -69,12 +69,12 @@ public class DbcFileUtil {
         return true;
     }
 
-    /**
+    **
      * Metodo que retorna se deve tentar incluir na lista tipada ContasDTO
      *
      * @param line: linha do arquivo
      * @return boolean
-     */
+
     private static boolean isValidaTentaAddConta(String line) {
         //TODO: As validacoes podem ser melhoradas de acordo com a necessidade
         // as opcoes nao validadas podem gerar erro no servico ou no processamento e sera registrado em log
@@ -87,9 +87,9 @@ public class DbcFileUtil {
         return line.trim().length() != 0;  // linha vazia
     }
 
-    /**
+
      * Faz a leitura do arquivo csv com os dados de contas e armazena em uma lista tipada
-     */
+
     public static List<ContaDTO> leArquivoMultipart(MultipartFile file) { //, String parPath) {
         List<ContaDTO> contasList = new ArrayList<ContaDTO>();
 
@@ -146,12 +146,12 @@ public class DbcFileUtil {
         return contasList;
     }
 
-    /**
+
      * Faz a leitura do arquivo csv com os dados de contas e armazena em uma lista tipada
      *
      * @param parPath: path do arquivo
      * @return List<ContaDTO>
-     */
+
     public static List<ContaDTO> leArquivo(String parPath) {
         List<ContaDTO> contasList = new ArrayList<ContaDTO>();
 
@@ -291,5 +291,5 @@ public class DbcFileUtil {
         }
 
         return null;
-    }
+    }*/
 }

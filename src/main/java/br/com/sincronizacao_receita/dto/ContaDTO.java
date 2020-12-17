@@ -4,13 +4,10 @@ import java.io.Serializable;
 
 public class ContaDTO implements Serializable {
 
-    //TODO: aqui como vamos atualizar contas com base em arquivo vou utilizar o DTO e os model's somente para JPA
-    private Long id;
     private String agencia;
     private String conta;
     private double saldo;
     private String status;
-    private Boolean retorno;
 
     public ContaDTO() {
     }
@@ -18,21 +15,11 @@ public class ContaDTO implements Serializable {
     public ContaDTO(String agencia,
                      String conta,
                      double saldo,
-                     String status,
-                     Boolean retorno) {
+                     String status) {
         this.agencia = agencia;
         this.conta = conta;
         this.saldo = saldo;
         this.status = status;
-        this.retorno = retorno;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getAgencia() {
@@ -67,11 +54,13 @@ public class ContaDTO implements Serializable {
         this.status = status;
     }
 
-    public Boolean getRetorno() {
-        return retorno;
-    }
-
-    public void setRetorno(Boolean retorno) {
-        this.retorno = retorno;
+    @Override
+    public String toString() {
+        return "ContaDTO{" +
+                "agencia='" + agencia + '\'' +
+                ", conta='" + conta + '\'' +
+                ", saldo=" + saldo +
+                ", status='" + status + '\'' +
+                '}';
     }
 }
