@@ -1,12 +1,9 @@
 package br.com.sincronizacao_receita.a_old.config_old;
 
-import org.quartz.*;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class QuartzConfiguration {
-    @Bean
+   /* @Bean
     public JobDetail quartzJobDetail() {
         //return JobBuilder.newJob(BatchScheduleJob.class).storeDurably().build();
         return null;
@@ -14,19 +11,19 @@ public class QuartzConfiguration {
 
     @Bean
     public Trigger jobTrigger() {
-        /*JobDetail job = newJob(MyJob.class)
-                .withIdentity("myJob")
-                .build();
+        //JobDetail job = newJob(MyJob.class)
+        //        .withIdentity("myJob")
+        //        .build();
 
-        Trigger trigger = newTrigger()
-                .withIdentity(triggerKey("myTrigger", "myTriggerGroup"))
-                .withSchedule(simpleSchedule()
-                        .withIntervalInHours(1)
-                        .repeatForever())
-                .startAt(futureDate(10, MINUTES))
-                .build();
+        //Trigger trigger = newTrigger()
+        //        .withIdentity(triggerKey("myTrigger", "myTriggerGroup"))
+        //        .withSchedule(simpleSchedule()
+        //                .withIntervalInHours(1)
+        //                .repeatForever())
+        //        .startAt(futureDate(10, MINUTES))
+        //        .build();
 
-        scheduler.scheduleJob(job, trigger);*/
+        //scheduler.scheduleJob(job, trigger);
 
 
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder
@@ -41,4 +38,5 @@ public class QuartzConfiguration {
                 //.startAt()
                 .build();
     }
+    */
 }
