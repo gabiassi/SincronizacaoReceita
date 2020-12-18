@@ -1,8 +1,10 @@
 package br.com.sincronizacao_receita.config.step;
 
+import br.com.sincronizacao_receita.config.processor.LerContasProcessorConfig;
 import br.com.sincronizacao_receita.dto.ContaDTO;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +18,12 @@ public class LerContasStepConfig {
 
     @Bean
     public Step lerContasStep(ItemReader<ContaDTO> lerContasReader,
-                                    ItemWriter<ContaDTO> lerContasWriter){
+                              ItemWriter<ContaDTO> lerContasWriter){
         return stepBuilderFactory
                 .get("lerContasStep")
                 .<ContaDTO, ContaDTO>chunk(3)
                 .reader(lerContasReader)
-                //.processor(imprimeParImparProcessor())
+                .processor(new LerContasProcessorConfig())
                 .writer(lerContasWriter)
                 .build();
     }

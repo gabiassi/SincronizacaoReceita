@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import javax.annotation.Resource;
 
 public class FlatFileItemReader<T>  {
-    @Bean
+    //@Bean
     public FlatFileItemReader<ContaDTO> fileItemReader(@Value("${input}") Resource resource) {
 
         System.out.println("INI READER");

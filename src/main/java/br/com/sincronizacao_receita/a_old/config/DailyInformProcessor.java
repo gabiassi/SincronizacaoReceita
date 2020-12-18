@@ -4,7 +4,7 @@ import br.com.sincronizacao_receita.dto.ContaDTO;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class DailyInformProcessor implements ItemProcessor<ContaDTO, ContaDTO> {
 
     //@Autowired

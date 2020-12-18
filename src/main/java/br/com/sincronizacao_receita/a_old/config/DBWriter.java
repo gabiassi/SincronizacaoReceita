@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
-public class DBWriter implements ItemWriter<ContaDTO> {
+//@Component
+public class DBWriter { //implements ItemWriter<ContaDTO> {
 
-    private final DailyInformRepository dailyInformRepository;
+   /* private final DailyInformRepository dailyInformRepository;
 
     @Autowired
     public DBWriter(DailyInformRepository dailyInformRepository) {
@@ -28,4 +28,6 @@ public class DBWriter implements ItemWriter<ContaDTO> {
 
         System.out.println("FIM WRITE");
     }
+
+    */
 }
