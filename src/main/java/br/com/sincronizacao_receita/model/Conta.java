@@ -1,21 +1,21 @@
-package br.com.sincronizacao_receita.dto;
+package br.com.sincronizacao_receita.model;
 
 import java.io.Serializable;
 
-public class ContaDTO implements Serializable {
+public class Conta implements Serializable {
 
-    private String agencia;
-    private String conta;
-    private double saldo;
-    private String status;
+    protected String agencia;
+    protected String conta;
+    protected double saldo;
+    protected String status;
 
-    public ContaDTO() {
+    public Conta() {
     }
 
-    public ContaDTO(String agencia,
-                     String conta,
-                     double saldo,
-                     String status) {
+    public Conta(String agencia,
+                 String conta,
+                 double saldo,
+                 String status) {
         this.agencia = agencia;
         this.conta = conta;
         this.saldo = saldo;

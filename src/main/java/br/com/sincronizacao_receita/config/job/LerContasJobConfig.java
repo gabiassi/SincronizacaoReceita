@@ -6,6 +6,7 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +18,7 @@ public class LerContasJobConfig {
     private JobBuilderFactory jobBuilderFactory;
 
     @Bean
-    public Job lerContasJob(Step lerContasStep){
+    public Job lerContasJob(Step lerContasStep) {
         return jobBuilderFactory
                 .get("lerContasJob")
                 .start(lerContasStep)

@@ -1,28 +1,34 @@
 package br.com.sincronizacao_receita.config.processor;
 
-import br.com.sincronizacao_receita.dto.ContaDTO;
-import org.springframework.batch.core.configuration.annotation.StepScope;
+import br.com.sincronizacao_receita.model.Conta;
+import br.com.sincronizacao_receita.model.ContaRet;
+import br.com.sincronizacao_receita.service.ReceitaService;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class LerContasProcessorConfig implements ItemProcessor<ContaDTO, ContaDTO> {
+public class LerContasProcessorConfig {
+    @Bean
+    public ItemProcessor<Conta, ContaRet> lerContasProcessor() {
+        return conta -> enviaSefaz(conta);
+    }
 
-    //@Autowired
-    //private CNPJFormatter cnpjFormatter;
+    public ContaRet enviaSefaz(Conta conta) {
+        ReceitaService receitaService = new ReceitaService();
 
-    @Override
-    public ContaDTO process(ContaDTO conta) throws Exception {
-    /* @StepScope
-     @Bean
-     public ContaDTO lerContasProcessor(ContaDTO conta) {*/
-        System.out.println("INI PROCESS");
+        boolean ret;
 
-       // dailyInform.setCnpj(cnpjFormatter.unformat(dailyInform.getCnpj()));
-        System.out.println(conta.getAgencia() + "#" + conta.getConta());
+        try {
+            ret = receitaService.atualizarConta(conta.getAgencia(), conta.getConta(), conta.getSaldo(), conta.getStatus());
+        } catch (InterruptedException e) {
+            //TODO: Aqui podemos tratar os erros de acordo com a necessidade e/ou funcionalidade do servico,
+            // neste caso mostro no log e continua proxima linha/arquivo
+            ret = false;
+        }
 
-        System.out.println("FIM PROCESS");
-        return conta;
+        ContaRet contaRet = new ContaRet(conta, ret);
+
+        return contaRet;
     }
 }
