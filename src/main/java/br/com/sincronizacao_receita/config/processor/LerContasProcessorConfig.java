@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class LerContasProcessorConfig {
     @Bean
     public ItemProcessor<Conta, ContaRet> lerContasProcessor() {
-        return conta -> enviaSefaz(conta);
+        return this::enviaSefaz;
     }
 
     public ContaRet enviaSefaz(Conta conta) {
@@ -22,13 +22,9 @@ public class LerContasProcessorConfig {
         try {
             ret = receitaService.atualizarConta(conta.getAgencia(), conta.getConta(), conta.getSaldo(), conta.getStatus());
         } catch (InterruptedException e) {
-            //TODO: Aqui podemos tratar os erros de acordo com a necessidade e/ou funcionalidade do servico,
-            // neste caso mostro no log e continua proxima linha/arquivo
             ret = false;
         }
 
-        ContaRet contaRet = new ContaRet(conta, ret);
-
-        return contaRet;
+        return new ContaRet(conta, ret);
     }
 }
